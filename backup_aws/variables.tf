@@ -11,8 +11,13 @@ variable "secondary_region" {
   type = string
 }
 
-variable "kms_key_arn" {
-  description = "KMS key ARN for backup encryption"
+variable "primary_kms_key_arn" {
+  description = "KMS key ARN for backup encryption in the primary region"
+  type        = string
+}
+
+variable "secondary_kms_key_arn" {
+  description = "KMS key ARN for backup encryption in the secondary region"
   type        = string
 }
 
